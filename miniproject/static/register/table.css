@@ -1,0 +1,52 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .ts {
+            color: #008000; /* Green color for the headers */
+            text-align: center;
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .styled-table th, .styled-table td {
+            border: 1px solid #008000; /* Green color for the borders */
+            padding: 8px;
+            text-align: left;
+        }
+
+        .styled-table th {
+            background-color: #008000; /* Green color for the header background */
+            color: white;
+        }
+
+        .active-row {
+            background-color: #008000; /* Green color for the active row background */
+            color: white;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #e0e0e0; /* Light gray on hover */
+        }
+
+        button {
+            background-color: #008000; /* Green color for the button background */
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+            color: #008000; /* Green color for the links */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>

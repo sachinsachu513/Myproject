@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navigation Bar</title>
+    <style type="text/css">
+        .logo img {
+            width: 70px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Add some spacing between the logo and text */
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: yellow;
+            font-family: calibri;
+            padding-center: 15px;
+            padding-center: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+        }
+
+        .logo a {
+            font-size: 35px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .text-container {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+            text-align: center;
+        }
+         h3 {
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
+            margin: 0;
+            text-align: center;
+        }
+ h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: green;
+            margin: 0;
+            text-align: center;
+        }
+
+         <style>
+        h2 {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .logo-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.logo-container img {
+    width: 80px;
+    height: auto;
+}
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="{% static 'unom.png'%}"></div>
+		 <h1>University of Madras,Institute of Distance Education</h1>
+
+        <div class="text-container">
+        </div>
+    </nav>
+<header>
+
+
+            <br><h2>🎉 Welecome to my Django Application 🚀</h2>
+                <br><h3>User Management System</h3>
+                <br><h2>T.S.Sachin</h2>
+                <br><h2>A22101PCA7505</h2>
+                <br><h2>MCA-II Year 3rd Sem</h2>
+                <br><h2>Batch:TA29,Feb-2024</h2>
+
+                 <br><br><h2><a href="/reg">Click here</a> Login or Signup</h2>
+
+            <br><br><div class="logo-container">
+        <img src="{% static 'sqlite.png' %}" alt="SQLITE Logo">
+        <img src="{% static 'python.png' %}" alt="Python Logo">
+        <img src="{% static 'dj.jpg' %}" alt="Django Logo">
+        <img src="{% static 'css.jpg' %}" alt="CSS Logo">
+        <img src="{% static 'html.jpeg' %}" alt="html Logo">
+
+    </div>
+      <br><br><h3> Under the Guidance of  </h3>
+      <h3>Mrs.Shanmuga Vadivu</h3>
+
+    </header>
+
+
+
+</body>
+</html>

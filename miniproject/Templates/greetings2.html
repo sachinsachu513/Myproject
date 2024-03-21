@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Links</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'greetings.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Set your desired background color */
+        }
+
+        .highlight-section {
+            background-color: #4CAF50; /* Green color */
+            padding: 20px;
+            text-align: center;
+            color: white; /* Text color for the highlight section */
+        }
+
+        .links-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .logo h1 {
+            color: #333333; /* Set your desired text color */
+            margin-top: 10px;
+        }
+
+        .logo p a {
+            color: #007bff; /* Set your desired link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logo p a:hover {
+            text-decoration: underline;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="highlight-section">
+    <div class="links-container">
+        <h1>Welcome again!</h1>
+    </div>
+</div>
+
+<div class="logo-container">
+    <div class="logo">
+        <img src="{% static 'cricket.jpeg'%}" alt="Cricket Logo">
+        <h1>Recent Matches</h1>
+        <p><a href="/cricket/buzz">Click here</a></p>
+    </div>
+
+    <div class="logo">
+        <img src="{% static 'india.jpg'%}" alt="Cricket Logo">
+        <h1>Upcoming Matches</h1>
+        <p><a href="/cricket/buss">Click here</a></p>
+    </div>
+
+    <div class="logo">
+        <img src="{% static 'polls.jpeg'%}" alt="Polls Logo">
+        <h1>Polls</h1>
+        <p><a href="/polls">Click here</a></p>
+    </div>
+</div>
+
+</body>
+</html>

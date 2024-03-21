@@ -1,0 +1,65 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Register</title><!DOCTYPE html>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'register//def.css' %}">
+
+
+
+</head>
+<body>
+<form method ="post">
+
+        {% csrf_token %}
+
+        <div class="registration-form">
+                    <h2>User Registration</h2>
+            <div class="form-group">
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+            </div>
+            <div class="form-group">
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </div>
+             <div class="form-group">
+                {{ form.age.label_tag }}
+                {{ form.age }}
+            </div>
+            <div class="form-group">
+                {{ form.adress.label_tag }}
+                {{ form.adress }}
+            </div>
+             <div class="form-group">
+                {{ form.emailid.label_tag }}
+                {{ form.emailid }}
+            </div>
+             <div class="form-group">
+                {{ form.phone.label_tag }}
+                {{ form.phone }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+            <div class="form-group">
+                {{ form.confirm_password.label_tag }}
+                {{ form.confirm_password }}
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+            <div class="form-group">
+                <p>Already have an account? <a href="\login">Login</a></p>
+            </div>
+        </div>
+
+
+
+  </form>
+</body>
+</html>

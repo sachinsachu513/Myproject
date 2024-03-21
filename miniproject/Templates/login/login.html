@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'register/def.css' %}">
+</head>
+<body>
+<form autocomplete="off" method="post">
+    <div class="registration-form">
+      <h2>Login !</h2>
+      {% csrf_token %}
+
+
+
+      <div class="form-group">
+        {{ form.emailid.label_tag }}
+        {{ form.emailid }}
+      </div>
+
+
+      <div class="form-group">
+        {{ form.password.label_tag }}
+        {{ form.password }}
+      </div>
+
+
+      <div class="form-group">
+        <input type="submit" value="login">
+      </div>
+       <div class="form-group">
+                <p>No account? <a href="\reg">Create one</a></p>
+            </div>
+    </div>
+  </form>
+</body>
+</html>

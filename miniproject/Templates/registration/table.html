@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'register/table.css' %}">
+</head><style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .ts {
+            color: #008000; /* Green color for the headers */
+            text-align: center;
+        }
+
+        .styled-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .styled-table th, .styled-table td {
+            border: 1px solid #008000; /* Green color for the borders */
+            padding: 8px;
+            text-align: left;
+        }
+
+        .styled-table th {
+            background-color: #008000; /* Green color for the header background */
+            color: white;
+        }
+
+        .active-row {
+            background-color: #008000; /* Green color for the active row background */
+            color: white;
+        }
+
+        .styled-table tbody tr:hover {
+            background-color: #e0e0e0; /* Light gray on hover */
+        }
+
+        button {
+            background-color: #008000; /* Green color for the button background */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a {
+             color: #ff0000;
+            text-decoration: none;
+        }
+
+  .password-input {
+  #
+    border: none;
+                background-color: #e0e0e0; /* Light gray on hover */
+
+  }
+
+    </style>
+</head>
+
+<body>
+<h2 class="ts">Hello user!</h2>
+
+<h1 class="ts">Register Members & CRUD OPERATION</h1>
+
+<table class="styled-table">
+    <thead>
+    <tr class="active-row">
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>Age</th>
+        <th>Adress</th>
+        <th>Emailid</th>
+        <th>Phonenumber</th>
+        <th>Password</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for s in emp %}
+    <tr>
+        <td>{{ s.first_name }}</td>
+        <td>{{ s.last_name }}</td>
+        <td>{{ s.age }}</td>
+        <td>{{ s.adress }}</td>
+        <td>{{ s.emailid }}</td>
+        <td>{{ s.phonenumber }}</td>
+<!--        <td>{{ s.password }}</td>-->
+        <td> <input type="password" value="{{ s.password }}" readonly class="password-input" /></td>
+
+        <td><a href="/update/{{ s.id }}">edit</a></td>
+        <td><a href="/delete/{{ s.id }}">delete</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a href="/reg"><button>Add Employees</button></a><br><br>
+<a href="/welcome">Click here</a>  <b>Webpage2</b>
+
+</body>
+</html>
